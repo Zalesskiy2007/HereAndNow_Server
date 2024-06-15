@@ -10,7 +10,11 @@ async function mainClient() {
   
 window.addEventListener("load", (event) => {
     mainClient();
-    navigator.geolocation.getCurrentPosition((s) => {
+    /*navigator.geolocation.getCurrentPosition((s) => {
         alert(s.coords.latitude);
+    });*/
+
+    document.getElementById("btn").addEventListener("click", () => {
+        window.location.href = "/login";
     });
 });

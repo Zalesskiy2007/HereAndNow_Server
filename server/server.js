@@ -3,11 +3,16 @@ const express = require("express");
 const morgan = require("morgan");
 const { Server } = require("socket.io");
 const fs = require("fs");
+let mongoose = require("mongoose");
 
 
 const app = express();
 app.use(morgan("combined"));
 app.use(express.static("."));
+
+app.use('/login', (req, res) => {
+    res.send("this is login location");
+});
 
 const server = http.createServer({
     key: fs.readFileSync("../cert/key.pem"),
