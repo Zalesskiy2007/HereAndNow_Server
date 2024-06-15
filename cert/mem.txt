@@ -1,0 +1,37 @@
+// npm
+npm init
+npm install npx
+
+// rollup + typescript
+npm install rollup@4.18.0
+npm install @rollup/plugin-typescript
+npx tsc --init
+npm install tslib
+npx rollup -c rollup.config.js --watch  // Parallel
+
+// Rebuild .js
+npx tsc
+
+// http
+npm install http-server
+npx http-server .                       // Parallel
+
+// eslint
+npm install eslint@8.56.0
+npm install typescript-eslint
+npx eslint --init
+
+// git
+git init .
+git add --all
+git commit -a -m "text"
+
+// React
+npm install react
+npm install react-dom
+npm install @types/react
+npm install @types/react-dom
+npm install @rollup/plugin-commonjs
+npm install @rollup/plugin-node-resolve
+npm install @rollup/plugin-replace
+npm install astroturf
