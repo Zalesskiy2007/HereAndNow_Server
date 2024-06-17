@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const { Server } = require("socket.io");
 const fs = require("fs");
 let mongoose = require("mongoose");
+let jwt = require("jsonwebtoken");
+let User = require('./user');
 
 
 const app = express();
@@ -21,6 +23,8 @@ const server = http.createServer({
 
 const io = new Server(server);
 
+mongoose.connect('mongodb://127.0.0.1:27017/HereAndNow')
+
 io.on("connection", (socket) => {
     console.log(`Client connected with id: ${socket.id}`);
   
@@ -28,7 +32,10 @@ io.on("connection", (socket) => {
         console.log(`Client disconnected with id: ${socket.id}`);
     });
 });
-  
-server.listen(process.env.PORT || 5000, () => {
-    console.log(`Server started on port ${server.address().port} :)`);
-});
+
+mongoose.connection.once('open', () => {
+    console.log("Connected to database!")
+    server.listen(process.env.PORT || 5000, () => {
+        console.log(`Server started on port ${server.address().port} :)`);
+    });
+})
