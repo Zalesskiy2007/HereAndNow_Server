@@ -78,10 +78,16 @@ window.addEventListener("load", (event) => {
             newImg.src = url;
 
             newImg.onload = () => {
-                imageToData(newImg, (data) => {
+                newImg.width = 512;  // need to do crop
+                newImg.height = 512; // need to do crop
+                // Now image is 512 * 512 pixels
+                
+                imageToData(newImg, (data) => {                
                     let imgset = document.getElementById("imgset");
                     let newSrc = dataToImage(data, newImg.width, newImg.height);  //String 17.9kB - 150 kB - save to DB
                     console.log(newSrc);
+                    console.log(data);
+                    document.getElementById("test").innerText = (newSrc.length / 1024.0) + " KiloBytes";
                     imgset.src = newSrc;                            
                 });
             };
