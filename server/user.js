@@ -1,4 +1,4 @@
-let mongoose = require("mongoose");
+let mongoose = require('mongoose');
 
 let User = new mongoose.Schema({
     name: String,
@@ -14,7 +14,7 @@ let User = new mongoose.Schema({
     imageWidth: Number,
     imageHeight: Number,
     trackingGeo: Boolean,
-    mapStyle: Number,
+    mapStyle: Number
 });
 
 module.exports = mongoose.model('Users', User);
