@@ -1,0 +1,5 @@
+Documentation file
+
+1) https://reactdev.ru/reference/react/useRef/#caveats
+2) https://ru.legacy.reactjs.org/docs/hooks-effect.html
+3) https://vc.ru/u/1389654-machine-learning/670964-davaite-uglubimsya-v-react-hooks-react-168

@@ -13,6 +13,8 @@ let User = new mongoose.Schema({
     imageSrc: String,
     imageWidth: Number,
     imageHeight: Number,
+    trackingGeo: Boolean,
+    mapStyle: Number,
 });
 
 module.exports = mongoose.model('Users', User);

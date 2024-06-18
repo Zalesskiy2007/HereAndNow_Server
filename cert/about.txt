@@ -1,0 +1,21 @@
+'Here & Now' project from MZ2 and ED2, 18.06.2024, 10-2, 'SPB PML 30 CGSG'Sr Group', Summer Practice 
+
+How to launch (start) project:
+    1) 
+        a) Install 'Node.Js', if 'node_modules' is not in project init it using npm.
+        b) Install 'MongoDB' on your computer
+
+    2) Start 'MongoDB' - database server. As for example, we installed folder with 'MongoDb' on 'C:\', and
+    created directory 'C:\data\db'. To start database server, you have to open 'Command Prompt' ('cmd')
+    and do some commands:
+        a) C: (Set disk C:\)
+        b) C:\mongodb\bin\mongod (Starts database server)
+
+    3) Go to 'out' folder in 'Here & Now' project folder ('HereAndNow'), and start server from 'out' using:
+        (*) node ../server/server.js
+
+    4) If you want to make any changes on the client side (in 'client' folder), you have to start a 'Roll Up'
+    (it is a 'Web Pack' tool). In 'Here & Now' project folder ('HereAndNow') do command:
+        (*) npx rollup -c rollup.config.js --watch
+
+Done!
